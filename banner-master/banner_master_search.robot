@@ -9,7 +9,8 @@ Resource    ../keywords/banner-resources/banner_master_resources.robot
 SEARCH001
     Open    
     ${Date}    Get Current Date
-    Set Global Variable  ${Path}  /Users/7n100350/Desktop/CRM ROBOT/screen-capture/Search/${Date}
+    ${normalize_path}    Normalize Path    ${CURDIR}../screen-capture/Campaign/Edit/${Date}
+    Set Global Variable  ${Path}  ${normalize_path}  
     sleep    5s
     Open Master Banner Page
     Set Search Master

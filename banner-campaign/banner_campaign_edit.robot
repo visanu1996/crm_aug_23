@@ -5,7 +5,7 @@ Resource    ../import-campaign.robot
 EDIT_POS_001
     banner_campaign_resources.Open
     ${Date}    Get Current Date
-    ${normalize_path}    Normalize Path    ${CURDIR}/CRM ROBOT/screen-capture/Campaign/Edit/${Date}
+    ${normalize_path}    Normalize Path    ${CURDIR}../screen-capture/Campaign/Edit/${Date}
     Set Global Variable  ${Path}  ${normalize_path}
     sleep    5s
     banner_campaign_resources.Date    2    5

@@ -7,7 +7,8 @@ Resource    ../keywords/banner-resources/banner_master_resources.robot
 COPY001
     Open
     ${Date}    Get Current Date
-    Set Global Variable  ${Path}  /Users/7n100350/Desktop/CRM ROBOT/screen-capture/Master/Copy/${Date}    
+    ${normalize_path}    Normalize Path    ${CURDIR}../screen-capture/Campaign/Edit/${Date}
+    Set Global Variable  ${Path}  ${normalize_path}   
     sleep    5s
     Open Master Banner Page
     First List Copy

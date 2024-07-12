@@ -7,7 +7,7 @@ Resource    ../keywords/banner-resources/banner_campaign_resources.robot
 COPY_001
     Open
     ${Date}    Get Current Date
-    ${normalize_path}    Normalize Path    ${CURDIR}/CRM ROBOT/screen-capture/Campaign/Edit/${Date}
+    ${normalize_path}    Normalize Path    ${CURDIR}../screen-capture/Campaign/Edit/${Date}
     Set Global Variable  ${Path}  ${normalize_path}
     sleep    5s
     Date    2    7

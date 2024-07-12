@@ -8,13 +8,14 @@ Resource    ../keywords/banner-resources/banner_master_resources.robot
 Edit 01
     Open
     ${Date}    Get Current Date
-    Set Global Variable  ${Path}  /Users/7n100350/Desktop/CRM ROBOT/screen-capture/Master/Edit/${Date}    
+    ${normalize_path}    Normalize Path    ${CURDIR}../screen-capture/Campaign/Edit/${Date}
+    Set Global Variable  ${Path}  ${normalize_path}    
     sleep    5s
     Open Master Banner Page
     First List Edit
     Edit BannerHeader
     Clear Pictures
-    Add Pictures    /Users/7n100350/Desktop/Test Robot/Pictures/normalsize3.png    /Users/7n100350/Desktop/Test Robot/Pictures/normalsize3.png
+    Add Pictures    ../pictures/normalsize3.png    ../pictures/normalsize3.png
     Reset Call to Action
     Set Screenshot Directory    ${Path}
     Capture Page Screenshot    Master_Test_${runningNumber}.png

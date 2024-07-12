@@ -97,7 +97,7 @@ Clear Pictures
     Execute Javascript    document.querySelector('input[name="ctl00$cphDataContent$btnRemoveFileIconTH"]').click()
     Execute Javascript    document.querySelector('input[name="ctl00$cphDataContent$btnRemoveFileIconEN"]').click()
 Add Pictures
-    [Arguments]    ${pic1}=../pictures/normalsize1.png    ${pic2}=../pictures/pictures/normalsize3.png
+    [Arguments]    ${pic1}=../pictures/normalsize1.png    ${pic2}=../pictures/normalsize3.png
     Execute Javascript    document.querySelectorAll("button.yui3-button")[0].nextElementSibling.style.visibility='visible'
     Choose File    xpath=//table[@id="ctl00_cphDataContent_iconTH"]/tbody/tr/td[2]/div/div/div/input   ${pic1}
     Sleep    2s

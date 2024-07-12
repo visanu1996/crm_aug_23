@@ -10,7 +10,8 @@ Resource    ../keywords/banner-resources/banner_master_resources.robot
 TC_Positive_01    
     Open    
     ${Date}    Get Current Date
-    Set Global Variable  ${Path}  /Users/7n100350/Desktop/CRM ROBOT/screen-capture/Master/Create/${Date}
+    ${normalize_path}    Normalize Path    ${CURDIR}../screen-capture/Campaign/Edit/${Date}
+    Set Global Variable  ${Path}  ${normalize_path}  
     sleep    5s
     Create Master Banner
     Set BannerHeader
